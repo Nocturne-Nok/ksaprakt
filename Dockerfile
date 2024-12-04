@@ -7,11 +7,13 @@ RUN npm install -g nodemon
 COPY package*.json ./
 RUN npm install
 
-COPY . .
-
-RUN chown -R node /srv/node/app
+COPY --chown=node:node . .
 
 USER node
+
+RUN if [ "$REBUILD_PRISMA_CLIENT" = "true" ]; then \
+    npm db:sync && npx prisma generate; \
+    fi
 
 EXPOSE 3000
 

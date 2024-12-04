@@ -13,3 +13,10 @@ Thumbs.db
 
 *.tmp
 *.temp
+prisma/schema.prisma
+prisma/migrations/migration_lock.toml
+prisma/migrations/20241204114623_init_resources/migration.sql
+.gitignore
+
+docker-compose.yml
+Dockerfile
