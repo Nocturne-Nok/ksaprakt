@@ -6,11 +6,11 @@ module.exports.createResource = {
   schema: {
     body: {
       type: "object",
-      required: ["name", "type", "amount", "price"],
+      required: ["name", "type", "quantity", "price"],
       properties: {
         name: { type: "string" },
         type: { type: "string" },
-        amount: { type: "number" },
+        quantity: { type: "number" },
         price: { type: "number" },
       },
     },
